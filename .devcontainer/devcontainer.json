@@ -1,0 +1,5 @@
+{
+  "name": "CMake in Codespaces",
+  "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu-22.04",
+  "updateContentCommand": "curl https://apt.kitware.com/kitware-archive.sh | sudo sh && sudo apt-get install -y cmake"
+}
