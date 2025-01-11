@@ -10,7 +10,7 @@ option(BUILD_DOCS "Build the docs tree." OFF)
 find_package(spdlog REQUIRED)
 
 add_library(sampleapp)
-target_sources(sampleapp PUBLIC FILE_SET CXX_MODULES FILES src/lib.cpp src/add.cpp)
+target_sources(sampleapp PUBLIC FILE_SET CXX_MODULES FILES src/lib.cpp src/basic_ops.cpp src/stats/mod.cpp src/stats/one_var.cpp)
 target_sources(sampleapp PRIVATE src/greet.c)
 target_include_directories(sampleapp PUBLIC include/sampleapp)
 target_link_libraries(sampleapp PRIVATE spdlog::spdlog)
@@ -20,7 +20,7 @@ add_executable(hello-world src/bin/hello-world.cpp)
 target_link_libraries(hello-world PRIVATE sampleapp spdlog::spdlog)
 add_executable(sample-app::hello-world ALIAS hello-world)
 
-add_executable(goodbye-world src/bin/goodbye-world.cpp)
+add_executable(goodbye-world src/bin/goodbye-world.c)
 target_link_libraries(goodbye-world PRIVATE sampleapp spdlog::spdlog)
 add_executable(sample-app::goodbye-world ALIAS goodbye-world)
 
