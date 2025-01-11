@@ -1,5 +1,8 @@
 {
   "name": "CMake in Codespaces",
   "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu-22.04",
-  "updateContentCommand": "curl https://apt.kitware.com/kitware-archive.sh | sudo sh && sudo apt-get install -y cmake"
+  "features": {
+    "ghcr.io/devcontainers/features/python": {}
+  },
+  "updateContentCommand": "curl https://apt.kitware.com/kitware-archive.sh | sudo sh && sudo apt-get install -y cmake && pipx install conan && wget https://github.com/ninja-build/ninja/releases/download/v1.12.1/ninja-linux.zip && sudo unzip -o ninja-linux.zip -d /usr/bin && rm ninja-linux.zip && sudo apt-get install -y lsb-release wget software-properties-common gnupg && sudo bash -c \"$(wget -O - https://apt.llvm.org/llvm.sh)\" bash 18 all"
 }

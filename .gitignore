@@ -1,3 +1,7 @@
+# CMake out-of-source build folder.
+build/
+
+#region https://github.com/github/gitignore/blob/main/CMake.gitignore
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
@@ -10,3 +14,17 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 CMakeUserPresets.json
+#endregion
+
+#region https://techoverflow.net/2022/02/12/conan-gitignore-for-executable-projects/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+bin/
+cmake_install.cmake
+conan.lock
+conanbuildinfo.cmake
+conanbuildinfo.txt
+conaninfo.txt
+graph_info.json
+#endregion
